@@ -1,7 +1,7 @@
 package inspira.demo;
 
 import inspira.basic.BasicOperations;
-// import inspira.constants.MathConstants;
+import inspira.constants.MathConstants;
 
 public class run {
     public static void main(String[] args) {
