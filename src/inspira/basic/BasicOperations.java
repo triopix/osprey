@@ -15,7 +15,7 @@ public class BasicOperations {
     }
 
     public static double multiply(double[] nums) {
-        int product=1;
+        int product = 1;
         for(double k : nums) {
             product *= k;
         }
