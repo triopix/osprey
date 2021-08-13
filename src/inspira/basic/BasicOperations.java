@@ -25,6 +25,10 @@ public class BasicOperations {
         return product;
     }
 
+    public static double abs(double a) {
+        return Math.abs(a);
+    }
+
     public static double divide(double a, double b) {
         return a / b;
     }
