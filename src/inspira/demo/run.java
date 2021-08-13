@@ -1,11 +1,11 @@
 package inspira.demo;
 
-import inspira.basic.BasicOperations;
-import inspira.constants.MathConstants;
+import inspira.sequences.impl.ArithmeticSequence;
 
 public class run {
     public static void main(String[] args) {
-        double basicTest = BasicOperations.divide(30, 5);
+        double[] mySequence = {2, 4, 6};
+        double basicTest = ArithmeticSequence.continuedSumOfTermsUpToNth(mySequence, 3, false);
         System.out.println(basicTest);
 
         //testing constants
