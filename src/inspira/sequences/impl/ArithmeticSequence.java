@@ -33,7 +33,7 @@ public class ArithmeticSequence extends Sequence implements SequenceType {
         return -1;
     }
 
-    //still under construction!
+    
     public static double continuedSumOfTermsUpToNth(double[] sequence, int nthTermToStopAt, boolean findNthTermAndContinueSum) {
         double sum;
         if(SequenceType.isArithmeticSequence(sequence)) {
