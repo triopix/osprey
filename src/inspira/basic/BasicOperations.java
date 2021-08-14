@@ -39,4 +39,23 @@ public class BasicOperations {
         bd = bd.setScale(places, RoundingMode.HALF_UP);
         return bd.doubleValue();
     }
+
+      //factorial using non-recursion
+
+//    public static double factorial(int x) {
+//        int result = 1;
+//        for(int i = x; i >= 1; i--) {
+//            result*=i;
+//        }
+//        return result;
+//    }
+
+    //factorial using recursion - much faster - like a loop but better
+    public static double factorial(int x) {
+        if(x == 0 || x == 1) {
+            return 1;
+        } else {
+            return x * factorial(x-1);
+        }
+    }
 }

@@ -1,12 +1,9 @@
 package inspira.sequences.impl;
 
 import inspira.basic.BasicOperations;
-import inspira.sequences.SequenceException;
 import inspira.sequences.SequenceIndexException;
 import inspira.sequences.SequenceType;
 import inspira.sequences.impl.base.Sequence;
-
-import java.util.ArrayList;
 
 public class ArithmeticSequence extends Sequence implements SequenceType {
 
@@ -41,7 +38,7 @@ public class ArithmeticSequence extends Sequence implements SequenceType {
                 double nthTermValue = findNthTermOfArithmeticSequence(sequence, nthTermToStopAt);
                 double firstTermValue = sequence[0];
                 double commonDifference = findCommonDiffInArithmeticSequence(sequence);
-                sum = Sequence.sumOfRangeOfNumbers(firstTermValue, nthTermValue, commonDifference);
+                sum = Sequence.sumOfRangeOfNumbersAsArithmetic(firstTermValue, nthTermValue, commonDifference);
             } else if(!findNthTermAndContinueSum && nthTermToStopAt > sequence.length) {
                 throw new SequenceIndexException("Chosen nth term out of bounds - findNthTermAndContinueSum was set to false \nTip: to calculate sum over the bounds - make sure to set findNthTermAndContinueSum = true");
             } else {

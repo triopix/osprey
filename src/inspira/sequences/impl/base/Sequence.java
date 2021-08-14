@@ -27,9 +27,18 @@ public class Sequence {
         return sum;
     }
 
-    public static double sumOfRangeOfNumbers(double start, double end, double step) {
+    public static double sumOfRangeOfNumbersAsArithmetic(double start, double end, double step) {
         int sum = 0;
         for (double i = start; i <= end; i += step) {
+            sum += i;
+        }
+        return sum;
+    }
+
+    //for geometric
+    public static double sumOfRangeOfNumbersAsGeometric(double start, double end, double step) {
+        int sum = 0;
+        for (double i = start; i <= end; i *= step) {
             sum += i;
         }
         return sum;
