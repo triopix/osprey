@@ -1,6 +1,6 @@
 package inspira.radexp;
 
-import inspira.basic.BasicOperations;
+import inspira.base.BasicOperations;
 import inspira.logarithms.Logarithms;
 
 public class RadicalExponents {

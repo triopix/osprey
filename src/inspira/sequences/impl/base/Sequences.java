@@ -1,9 +1,12 @@
 package inspira.sequences.impl.base;
 
-import inspira.basic.BasicOperations;
+import inspira.base.BasicOperations;
 import inspira.statistics.Statistics;
 
-public class Sequence {
+import java.util.Arrays;
+import java.util.List;
+
+public class Sequences {
 
     //general sequence calculations - regardless of geometric or arithmetic types
 
@@ -49,7 +52,8 @@ public class Sequence {
         return sequence.length;
     }
 
-    //applications of statistics in sequences
+    //applications of statistics in sequences - probably not a good idea as it destroys the idea or concept of sequences
+    //ahh but who cares - there all just numbers! - but don't worry these methods are free of bugs! :)
     public static double getMaxOfSequence(double[] sequence) {
         return Statistics.getMax(sequence);
     }
@@ -62,7 +66,7 @@ public class Sequence {
         return Statistics.arithmeticMean(sequence);
     }
 
-    public static double modeOfSequence(double[] sequence) {
+    public static List<Double> modeOfSequence(double[] sequence) {
         return Statistics.mode(sequence);
     }
 
@@ -72,5 +76,9 @@ public class Sequence {
 
     public static double rangeOfSequence(double[] sequence) {
         return Statistics.range(sequence);
+    }
+
+    public static void printSequence(double[] sequence) {
+        System.out.println(Arrays.toString(sequence));
     }
 }

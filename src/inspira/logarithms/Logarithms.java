@@ -1,8 +1,5 @@
 package inspira.logarithms;
 
-import inspira.basic.BasicOperations;
-import inspira.constants.MathConstants;
-
 public class Logarithms {
 
     //used for engineering

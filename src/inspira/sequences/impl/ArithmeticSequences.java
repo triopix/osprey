@@ -1,11 +1,10 @@
 package inspira.sequences.impl;
 
-import inspira.basic.BasicOperations;
 import inspira.sequences.SequenceIndexException;
 import inspira.sequences.SequenceType;
-import inspira.sequences.impl.base.Sequence;
+import inspira.sequences.impl.base.Sequences;
 
-public class ArithmeticSequence extends Sequence implements SequenceType {
+public class ArithmeticSequences extends Sequences implements SequenceType {
 
     public static double findCommonDiffInArithmeticSequence(double[] arithmeticSequence) {
         double d = arithmeticSequence[1] - arithmeticSequence[0];
@@ -38,15 +37,39 @@ public class ArithmeticSequence extends Sequence implements SequenceType {
                 double nthTermValue = findNthTermOfArithmeticSequence(sequence, nthTermToStopAt);
                 double firstTermValue = sequence[0];
                 double commonDifference = findCommonDiffInArithmeticSequence(sequence);
-                sum = Sequence.sumOfRangeOfNumbersAsArithmetic(firstTermValue, nthTermValue, commonDifference);
+                sum = Sequences.sumOfRangeOfNumbersAsArithmetic(firstTermValue, nthTermValue, commonDifference);
             } else if(!findNthTermAndContinueSum && nthTermToStopAt > sequence.length) {
                 throw new SequenceIndexException("Chosen nth term out of bounds - findNthTermAndContinueSum was set to false \nTip: to calculate sum over the bounds - make sure to set findNthTermAndContinueSum = true");
             } else {
-                return Sequence.sumOfTermsInSequence(sequence, nthTermToStopAt);
+                return Sequences.sumOfTermsInSequence(sequence, nthTermToStopAt);
             }
         } else {
             return -1;
         }
         return sum;
+    }
+
+    public static double findMeanOfTwoTermsInArithmeticSequence(double[] sequence, int term, int anotherTerm) {
+        if(SequenceType.isArithmeticSequence(sequence)) {
+            double termValue = findNthTermOfArithmeticSequence(sequence, term);
+            double anotherTermValue = findNthTermOfArithmeticSequence(sequence, anotherTerm);
+            return (termValue + anotherTermValue) / 2;
+        } else {
+            return -1;
+        }
+    }
+
+    //construct a custom arithmetic sequence using some parameters
+    public static double[] constructArithmeticSequence(double firstTermValue, double commonDifference, int upToHowManyTerms) {
+        double[] constructedArithmeticSequence = new double[upToHowManyTerms];
+        int i;
+        for(i = 0; i <= constructedArithmeticSequence.length-1; i++) {
+            if(i==0) {
+                constructedArithmeticSequence[0] = firstTermValue;
+            } else {
+                constructedArithmeticSequence[i] = firstTermValue += commonDifference;
+            }
+        }
+        return constructedArithmeticSequence;
     }
 }
