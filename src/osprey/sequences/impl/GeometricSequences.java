@@ -58,4 +58,17 @@ public class GeometricSequences extends Sequences implements SequenceType {
             return -1;
         }
     }
+
+    public static double[] constructGeometricSequence(double firstTermValue, double commonRatio, int constructUpToTerm) {
+        double[] constructedArithmeticSequence = new double[constructUpToTerm];
+        int i;
+        for(i = 0; i <= constructedArithmeticSequence.length-1; i++) {
+            if(i==0) {
+                constructedArithmeticSequence[0] = firstTermValue;
+            } else {
+                constructedArithmeticSequence[i] = firstTermValue *= commonRatio;
+            }
+        }
+        return constructedArithmeticSequence;
+    }
 }

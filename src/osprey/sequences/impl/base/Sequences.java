@@ -81,4 +81,6 @@ public class Sequences {
     public static void printSequence(double[] sequence) {
         System.out.println(Arrays.toString(sequence));
     }
+
+    //sorting and searching algorithms go here as well from the compsci package
 }

@@ -59,9 +59,8 @@ public class ArithmeticSequences extends Sequences implements SequenceType {
         }
     }
 
-    //construct a custom arithmetic sequence using some parameters
-    public static double[] constructArithmeticSequence(double firstTermValue, double commonDifference, int upToHowManyTerms) {
-        double[] constructedArithmeticSequence = new double[upToHowManyTerms];
+    public static double[] constructArithmeticSequence(double firstTermValue, double commonDifference, int constructUpToTerm) {
+        double[] constructedArithmeticSequence = new double[constructUpToTerm];
         int i;
         for(i = 0; i <= constructedArithmeticSequence.length-1; i++) {
             if(i==0) {
