@@ -70,7 +70,7 @@ public final class BasicOperations {
      * @param x value to factorial -> x!
      * @return the factorial of x
      * @deprecated since 8
-     * Use the latest method - {@link #factorial(int x)}
+     * -> use latest - {@link #factorial(int x)}
      * <ul><li>Constraints -> x is 0 or x is 1, then the
      * result is 1.</ul>
      */
@@ -79,6 +79,9 @@ public final class BasicOperations {
         if(x == 0 || x == 1) {
             return 1;
         } else {
+            if(x < 0) {
+                throw new ArithmeticException("Negative values cannot have factorials");
+            }
             int result = 1;
             for(int i = x; i >= 1; i--) {
                 result*=i;
@@ -95,6 +98,6 @@ public final class BasicOperations {
      * result is 1.</ul>
      */
     public static double factorial(int x) {
-        return x == 0 || x == 1 ? 1 : x * factorial(x-1);
+        return x == 0 || x == 1 ? 1: x * factorial(x-1);
     }
 }

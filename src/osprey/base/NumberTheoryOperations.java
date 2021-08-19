@@ -210,4 +210,57 @@ public final class NumberTheoryOperations {
     public static double fractionToDecimal(double numerator, double denominator) {
         return BasicOperations.divide(numerator, denominator);
     }
+
+    /**
+     * @param a has to be integer - can be negative - cannot be a decimal value
+     * because this destroys the property of addition rules for even or odd numbers which states that
+     * {@code even + even = even} and {@code odd + odd = even} always.
+     * @return the boolean value if the specified integer is odd or not
+     */
+    public static boolean isOdd(int a) {
+        return a % 2 != 0;
+    }
+
+    /**
+     * @param a has to be integer - can be negative - cannot be a decimal value
+     * because this destroys the property of addition rules for even or odd numbers which states that
+     * {@code even + even = even} and {@code odd + odd = even} always.
+     * @return the boolean value if the specified integer is even or not
+     */
+    public static boolean isEven(long a) {
+        return a % 2 != 0;
+    }
+
+    /**
+     * @param a has to be integer - cannot be negative - cannot be a decimal value - cannot be zero
+     * @return the boolean value if the specified integer is composite or not
+     */
+    public static boolean isComposite(long a) {
+        List<Long> factors = factorize(a);
+        if(a == 0) {
+            throw new ArithmeticException("Zero is not prime nor composite");
+        } else if(a < 0) {
+            throw new ArithmeticException("Negative numbers cannot be composite or prime - and so are not accepted");
+        } else {
+            return factors.size() > 2;
+        }
+    }
+
+    /**
+     * @param a has to be integer - cannot be negative - cannot be a decimal value -
+     * cannot be zero - if a is one then it is not prime because it needs
+     * to have two distinct integers to divide by - one only has one and itself
+     * which are equal - this does not match the description for a prime number so this is false
+     * @return the boolean value if the specified integer is prime or not
+     */
+    public static boolean isPrime(long a) {
+        List<Long> factors = factorize(a);
+        if(a == 0) {
+            throw new ArithmeticException("Zero is not prime nor composite");
+        } else if(a < 0) {
+            throw new ArithmeticException("Negative numbers cannot be composite or prime - and so are not accepted");
+        } else {
+            return factors.contains(1L) && factors.contains(a) && factors.size() == 2;
+        }
+    }
 }
