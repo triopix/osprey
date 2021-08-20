@@ -13,7 +13,7 @@ import java.math.RoundingMode;
          * Factorial using {@link #factorial(int x)} or {@link #factorialNonRecursion(int x)} which is deprecated
         * @author  Archisman Nath
         * @since   1.0
-        **/
+ **/
 
 public final class BasicOperations {
 
@@ -29,7 +29,7 @@ public final class BasicOperations {
         return sum;
     }
 
-    /** @return the result of subtraction between 2 numbers*/
+    /** @return the result of subtraction between 2 numbers**/
     public static double subtract(double a, double b) {
         return a - b;
     }
@@ -68,6 +68,7 @@ public final class BasicOperations {
     /**Calculates the factorial value of entered integer
      *
      * @param x value to factorial -> x!
+     * @exception ArithmeticException if specified conditions are not met
      * @return the factorial of x
      * @deprecated since 8
      * -> use latest - {@link #factorial(int x)}
@@ -94,6 +95,7 @@ public final class BasicOperations {
      * 
      * @param x value to factorial -> x!
      * @return the factorial of x
+     * @exception StackOverflowError if number is negative due to deep recursive overflow
      * <ul><li>Constraints -> x is 0 or x is 1, then the
      * result is 1.</ul>
      */

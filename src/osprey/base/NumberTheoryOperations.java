@@ -224,7 +224,7 @@ public final class NumberTheoryOperations {
     /**
      * @param a has to be integer - can be negative - cannot be a decimal value
      * because this destroys the property of addition rules for even or odd numbers which states that
-     * {@code even + even = even} and {@code odd + odd = even} always.
+     * {@code even + even = even} and {@code odd + odd = even} always
      * @return the boolean value if the specified integer is even or not
      */
     public static boolean isEven(long a) {
@@ -233,6 +233,7 @@ public final class NumberTheoryOperations {
 
     /**
      * @param a has to be integer - cannot be negative - cannot be a decimal value - cannot be zero
+     * @exception ArithmeticException if specified conditions are not met
      * @return the boolean value if the specified integer is composite or not
      */
     public static boolean isComposite(long a) {
@@ -251,6 +252,7 @@ public final class NumberTheoryOperations {
      * cannot be zero - if a is one then it is not prime because it needs
      * to have two distinct integers to divide by - one only has one and itself
      * which are equal - this does not match the description for a prime number so this is false
+     * @exception ArithmeticException if specified conditions are not met
      * @return the boolean value if the specified integer is prime or not
      */
     public static boolean isPrime(long a) {
