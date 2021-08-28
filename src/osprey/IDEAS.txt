@@ -1,0 +1,17 @@
+-------------------------------------------
+We need to make a package installer for our
+jar file which we will export
+---------------------------------------
+
+DONE:
+
+measurement package
+logarithms package - @tags for this one
+sequences package
+radexp package - @tags for this one
+base package
+statistics package
+constants package - @tags for this one
+------------------------------------------
+
+currently doing the trigonometry package in geometry
