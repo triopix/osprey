@@ -4,7 +4,7 @@ import osprey.constants.MathConstants;
 
 public final class AngleConversion {
 
-    private AngleConversion() {};
+    private AngleConversion() {}
 
     public static double radiansToDegrees(double radians) {
         return Math.toDegrees(radians);

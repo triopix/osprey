@@ -2,7 +2,7 @@ package osprey.constants;
 
 public final class MathConstants {
 
-    private MathConstants() {};
+    private MathConstants() {}
 
     //important Math constants used in mathematics
     public static final double PI_EXACT = Math.PI;
