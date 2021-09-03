@@ -12,4 +12,17 @@ public final class MathConstants {
     public static final String UNITS = "units";
     private static final char SQUARED = '\u00B2';
     public static final String UNITS_SQUARED = UNITS+SQUARED;
+
+    //Nan values - float, double, int, long
+    public static final double DOUBLE_NaN = Double.NaN;
+    public static final float FLOAT_NaN = Float.NaN;
+
+    //other important constants
+    public static final double POSITIVE_INFINITY_DOUBLE = Double.POSITIVE_INFINITY;
+    public static final double POSITIVE_INFINITY_FLOAT = Float.POSITIVE_INFINITY;
+    public static final double NEGATIVE_INFINITY_DOUBLE = Double.NEGATIVE_INFINITY;
+    public static final double NEGATIVE_INFINITY_FLOAT = Float.NEGATIVE_INFINITY;
+
+
+
 }

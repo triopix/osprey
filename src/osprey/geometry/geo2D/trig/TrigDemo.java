@@ -39,5 +39,12 @@ public class TrigDemo {
         System.out.println(BaseTrigFunctions.cotGrad(20));
 
 
+        System.out.println("-------------------------------------");
+        System.out.println(InverseTrigFunctions.arcSinRad(0.5)); //return the value in radians
+        System.out.println(InverseTrigFunctions.arcSinDeg(0.5)); //return the value in degrees
+        System.out.println(InverseTrigFunctions.arcSinGrad(0.5)); //return the value in gradians
+
+
+
     }
 }
