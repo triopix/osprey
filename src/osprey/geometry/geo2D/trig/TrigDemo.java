@@ -44,6 +44,11 @@ public class TrigDemo {
         System.out.println(InverseTrigFunctions.arcSinDeg(0.5)); //return the value in degrees
         System.out.println(InverseTrigFunctions.arcSinGrad(0.5)); //return the value in gradians
 
+        System.out.println("--------------------------------------");
+        System.out.println(InverseTrigFunctions.arcCosRad(0.5)); //returns the value in radians
+        System.out.println(InverseTrigFunctions.arcCosDeg(0.5)); //returns the value in degrees
+
+
 
 
     }
