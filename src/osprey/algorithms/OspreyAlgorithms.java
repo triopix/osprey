@@ -69,7 +69,8 @@ public final class OspreyAlgorithms extends Statistics {
         }
         return true;
     }
-
+    
+    //might need some working on
     public static boolean checkReversed(double[] x, double[] y) {
         if (x.length != y.length) {
             return false;
@@ -81,7 +82,8 @@ public final class OspreyAlgorithms extends Statistics {
         }
         return true;
     }
-
+    
+    //TODO add functionallity for this
     public static boolean isReversed(double[] array) {
         
         return true;
