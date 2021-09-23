@@ -4,6 +4,10 @@ import osprey.constants.MathConstants;
 import osprey.geometry.geo2D.angles.AngleConversion;
 
 public class InverseTrigFunctions {
+    
+    //TAKING INTO ACCOUNT THE DOMAIN AND RANGE FOR EACH FUNCTIONS
+    
+    //MIGHT NEED SOME CHANGES I THINK (MABEY NOT)
 
     //arc sine
     public static double arcSinRad(double x) {
