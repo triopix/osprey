@@ -4,7 +4,8 @@ import java.awt.*;
 import java.net.URL;
 
 public abstract class CurrencyConverter {
-
+    
+    //didnt want to spend a whole lot of time with currency - so this just does some cool console animation and opens up a webpage! (With the most accurate uptodate currency converter)
     public static void openConverter() {
         try {
             System.out.println("Starting servers... ");
