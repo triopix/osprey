@@ -2,7 +2,7 @@ package osprey.logarithms;
 
 public final class Logarithms {
 
-    private Logarithms() {};
+    private Logarithms() {}
 
     //used for engineering
     public static double log10(double a) {
